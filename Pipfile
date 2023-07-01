@@ -11,6 +11,7 @@ requests = "*"
 django-cors-headers = "*"
 mysqlclient = "*"
 djangorestframework = "*"
+gunicorn = "*"
 
 [dev-packages]
 
