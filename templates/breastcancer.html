@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'CSS/BreastCancer.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container ">
+        <h1 class="head-title">Brain Tumor</h1>
+        <form action="" method="post" enctype="multipart/form-data" class="formm" id="sendfile">
+            {% csrf_token %}
+            <div class="inputs">
+                <div class="input_field">
+                    <label for="file" id="imageLabel">Chose your Brain Ray Image :</label>
+                    <input 
+                        title="Image" 
+                        type="file" 
+                        class="form-control btn btn-outline-info" 
+                        name="brain" 
+                        id="file" 
+                        accept="image/png, image/gif, image/jpeg"
+                    />
+                </div>
+                <input name="message" id="message" class="cl-inpt" type="text">
+            </div>
+            <button>Submit</button>
+        </form>
+        <div id="brain_output">
+            <h3 class="result">{{ result }}</h3>
+        </div>
+        <div class="s-1 content">
+            <figure style="padding-left: 80px;">
+                <img src="{% static 'Images/1.jpg' %}" alt="" style="width: 200px; ">
+            </figure>
+            <div class="text cl-r">
+                <p style="font-size: 15px ;" >
+                    An institution that isbuilt,staffed <br>
+                    ,and equipped for diagnosis of <br>
+                    disease;for the treatment,both <br>
+                    medical and surgical,of the sick <br>
+                    andthe injured;and for their <br>
+                    housing during this process.
+                </p>
+            </div>
+        </div>
+
+        <div class="s-1 content">
+            <div class="text cl-r">
+                <p style="padding-top: 10px; font-size: 15px;">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book.
+                </p>
+            </div>
+            <figure>
+                <img src="{% static 'Images/2.jpg' %}" alt="" style="width: 350px;">
+            </figure>
+            
+        </div>
+    </div>
+    <br>
+    <br><br><br>
+{% endblock %}

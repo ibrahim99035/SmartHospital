@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'CSS/about.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="cardsContainer">
+        {% for k, v in team.items %}
+            <div class="card">                  
+                {% for k2, v2 in v.items %}
+
+                    {% if k2 == 'photo'%}
+                        <div id="profile">
+                            <img src="{% static v2  %}" alt="personal photo" width="50px" height="80px">
+                        </div>    
+                    {% endif %}
+        
+                    {% if k2 == 'name' %}
+                        <div>
+                            {{ v2 }}
+                        </div>
+                    {% endif %}
+
+                    {% if k2 == 'phone' %}
+                        <div>
+                            Phone: {{ v2 }}
+                        </div>
+                    {% endif %}
+                    
+                    {% if k2 == 'email' %}
+                        <div>
+                            <a href="{{ v2 }}">{{ v2 }}</a>
+                        </div>
+                    {% endif %}
+                    <br>
+                {% endfor %}
+            </div>
+            <br>       
+        {% endfor %}
+    </div>
+{% endblock %}

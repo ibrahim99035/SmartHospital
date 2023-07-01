@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'CSS/Hospital.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container ">
+        <h1 class="head-title">Hospital "Al-Asema"</h1>
+        <div class="s-1 content">
+            <div class="text cl-r">
+                <p style="font-size: 15px ; padding-top: 30px; padding-left: 50PX;" >
+                    An institution that isbuilt,staffed <br>
+                    ,and equipped for diagnosis of <br>
+                    disease;for the treatment,both <br>
+                    medical and surgical,of the sick <br>
+                    andthe injured;and for their <br>
+                    housing during this process.
+                </p>
+            </div>
+            <figure style="padding-left: 80px;">
+                <img src="{% static 'Images/3.jpg' %}" alt="" style="width: 200px; ">
+            </figure>
+        </div>
+        <div class="s-1 content" style="margin-bottom:10px">
+            <figure style="padding-left: 100px;">
+                <img src="{% static 'Images/4.jpg' %}" alt="" style="width: 150px;">
+            </figure>
+            <div class="text cl-r">
+                <p style="padding-top: 10px;padding-right: 50PX ;font-size: 15px;">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book.
+                </p>
+            </div>
+        </div>
+        <div class="s-1 content">
+        <div class="content2">
+            <img src="{% static 'Images/5.png' %}" alt=""> 
+            <button class="button2"><a href="/hospital/breastcancer">Breast</a></button>
+            
+        </div>
+        <div class="content2">
+            <img src="{% static 'Images/6.png' %}" alt=""> 
+            <button><a href="/hospital/braintumor"> Brain</a></button>
+        </div>
+        </div>
+        
+    </div>    
+    <br>
+{% endblock %}

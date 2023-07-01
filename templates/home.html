@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="logoText">
+        <h1>AlASEMA</h1>
+        <h2>Smart City</h2>
+    </div>
+    <div class="textContent">
+        <div class="">
+            <p>
+                Al-Asema smart city is a municipality that uses
+                information and communication technologies
+                (ICT) to increase operational efficiency,
+                share information with the public and improve
+                both the quality of government services
+                and citizen welfare.While the exact definition
+                varies, the overarching mission of a smart city
+                is to optimize city functions and drive economic
+                growth while improving quality of life for its
+                citizens using smart technology and data analysis.
+            </p>
+            <img src="{% static 'Images/smartCityHome.jpg' %}" alt="">
+        </div>
+        <span>
+            A smart city's success depends on its ability to form a strong relationship
+            between the government -- including its bureaucracy and regulations --
+            and the private sector. This relationship is necessary because most of the work
+            that is done to create and maintain a digital, data-driven environment occurs
+            outside of the government. Surveillance equipment for busy streets could
+            include sensors from one company, cameras from another and a server from
+            yet another.
+        </span>
+    </div>
+    <div class="footerr">
+        <h1>AL ASEMA</h1>
+        <div class="footerrr">
+            <img src="{% static 'Images/fcultyLogo.png' %}" alt="" style="margin-bottom:15px ;">
+            <img src="{% static 'Images/logo.png' %}" alt="" style="margin-bottom:15px ;">
+            <img src="{% static 'Images/tanta-logo.png' %}" alt="" style="margin-bottom:15px ;">
+        </div>
+    </div>
+{% endblock %}

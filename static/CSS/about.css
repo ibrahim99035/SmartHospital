@@ -1,0 +1,24 @@
+.cardsContainer{
+    width:80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.card{
+    background-color: rgb(82, 77, 87);
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+    border-radius: 15px;
+}
+
+#profile{
+    position: relative;
+    width: 10%;
+    height: 10%;
+}
+#profile img{
+    margin: auto;
+}
